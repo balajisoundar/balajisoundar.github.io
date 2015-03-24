@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -19,6 +19,20 @@
   ga('send', 'pageview');
 
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script type="text/javascript">
+  var app=angular.module("app",[]);
+  app.config(function($routeProvider) {
+    $routeProvider.when('/',{controller:mainController,templateUrl:'/html/main.html'})
+    
+  });
+  app.controller('mainController',  function(){
+    $scope.a={};
+  })
+
+
+
+</script>
   </head>
 
   <body>
@@ -36,31 +50,8 @@
     </header>
 
     <div class="container">
-      <section id="main_content">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to My Page.</h3>
-
-<p>I am a Frontend web developer and a javascriptER .I have worked on projects built in various frameworks like Magento , Codeigniter , Angularjs , Wordpress and also vanilla web technologies. </p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Point of Interest</h3>
-
-<p><a href="https://balajisoundar.github.io/javascripts/lazyResponsive.js" title="underContruction">lazyResponsive.js</a> - Light weight library to implement lazy loading with responsive download (only 1kb).</p>
-<p><a href="http://balajisoundar.github.io/projectx.html" title="underContruction">projectX.js</a> - MVC javascript framework built on lazyCall.</p>
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a></h3>
-
-<p></p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a></h3>
-
-
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a></h3>
-
-<p></p>
+      <section id="main_content" ng-view>
+        
       </section>
     </div>
 
