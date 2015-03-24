@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html >
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -20,13 +20,17 @@
 
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
 <script type="text/javascript">
-  var app=angular.module("app",[]);
-  app.config(function($routeProvider) {
-    $routeProvider.when('/',{controller:MainController,templateUrl:'/html/main.html'})
+  var app=angular.module("App",['ngRoute','ngResource']);
+  app.config(['$routeProvider',function($routeProvider) {
+    $routeProvider.when('/',{controller:'MainController',templateUrl:'/html/main.html'}).otherwise({redirectTo:'/'});
     
-  });
-  app.controller('MainController',  function(){
+  }]);
+
+  app.controller('MainController',  function($scope){
     $scope.a={};
   })
 
@@ -35,7 +39,7 @@
 </script>
   </head>
 
-  <body>
+  <body ng-app="App">
 
     <header>
       <div class="container">
