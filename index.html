@@ -23,10 +23,10 @@
 <script type="text/javascript">
   var app=angular.module("app",[]);
   app.config(function($routeProvider) {
-    $routeProvider.when('/',{controller:mainController,templateUrl:'/html/main.html'})
+    $routeProvider.when('/',{controller:MainController,templateUrl:'/html/main.html'})
     
   });
-  app.controller('mainController',  function(){
+  app.controller('MainController',  function(){
     $scope.a={};
   })
 
