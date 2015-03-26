@@ -12,7 +12,7 @@
 
 <p>create img element with an id and src element empty or anything (like a default image) .</p>
 
-<pre><code><img id="logo" src="loading.gif" /></code></pre>
+<pre><code>&lt;img id="logo" src="loading.gif" /&gt;</code></pre>
 
 <p>and in your javascript  call <pre><code>lazyResponsive.load(config);</code></pre>
 
@@ -21,7 +21,6 @@ pseudo code for config obj is</p>
 <pre><code>{
 	"min:max":{
 		id:"url of the image"
-
 	}
 	.
 	.
@@ -31,10 +30,6 @@ pseudo code for config obj is</p>
 	default:{
 	   id:"url of the image"
 	}
-
-
-
-
 }</code></pre>
 <p>example:</p>
 
@@ -45,6 +40,6 @@ pseudo code for config obj is</p>
 	"300:769":{
 			logo:"http://example.com/logo_small.png"
 	}
-
 }
+
 lazyResponsive.load(config);</code></pre>
