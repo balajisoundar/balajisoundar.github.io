@@ -7,3 +7,44 @@
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>demo</h3>
 
 <p>include <code>&lt;script src="http://balajisoundar.github.io/javascripts/lazyResponsive.js" &gt;&lt;/script&gt;</code>	 to your code</p>
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to </h3>
+
+<p>create img element with an id and src element empty or anything (like a default image) .</p>
+
+<pre><code><img id="logo" src="loading.gif" /></code></pre>
+
+<p>and in your javascript  call <pre><code>lazyResponsive.load(config);</code></pre>
+
+pseudo code for config obj is</p>
+
+<pre><code>{
+	"min:max":{
+		id:"url of the image"
+
+	}
+	.
+	.
+	.
+	.
+	.
+	default:{
+	   id:"url of the image"
+	}
+
+
+
+
+}</code></pre>
+<p>example:</p>
+
+<pre><code>var config={
+	"770:1380":{
+			logo:"http://example.com/logo.png"
+	}
+	"300:769":{
+			logo:"http://example.com/logo_small.png"
+	}
+
+}
+lazyResponsive.load(config);</code></pre>
