@@ -12,6 +12,7 @@ function rwd()
 					var text=document.createElement("span");
 					text.innerHTML=ele[i].offsetWidth+"px";
 					text.style.color="white";
+					text.style.display="inline-block";
 					text.style.backgrounColor="red";
 					ele[i].parentNode.insertBefore(text,ele[i]);
 				}
