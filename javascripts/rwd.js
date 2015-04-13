@@ -13,7 +13,7 @@ function rwd()
 					text.innerHTML=ele[i].offsetWidth+"px";
 					text.style.color="white";
 					text.style.display="inline-block";
-					text.style.backgrounColor="red";
+					text.style.backgroundColor="red";
 					ele[i].parentNode.insertBefore(text,ele[i]);
 				}
 			}
