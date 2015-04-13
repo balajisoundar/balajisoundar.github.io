@@ -12,7 +12,8 @@ function rwd()
 					var text=document.createElement("span");
 					text.innerHTML=window.innerWidth+"px";
 					text.style.color="red";
-					ele[i].parentNode.insertBefore(text,ele[i]);
+					//ele[i].parentNode.insertBefore(text,ele[i]);
+					ele[i].appendChild(text);
 				}
 			}
 		}
