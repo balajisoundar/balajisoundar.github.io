@@ -1,6 +1,6 @@
 function rwd()
 	{
-		if(localStorage.dev)
+		if(Number(localStorage.dev))
 		{
 			var ele=document.querySelectorAll("*");
 			for(var i=0;i<ele.length;i++)
