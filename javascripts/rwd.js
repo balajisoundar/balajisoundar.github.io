@@ -12,7 +12,7 @@ function rwd()
 					var text=document.createElement("span");
 					text.innerHTML=window.innerWidth+"px";
 					text.style.color="red";
-					ele[i].appendChild(text);
+					ele[i].parent.insertBefore(text,ele[i]);
 				}
 			}
 		}
