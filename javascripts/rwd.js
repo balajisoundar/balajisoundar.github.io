@@ -13,9 +13,10 @@ function rwd()
 						ele[i].style.border="2px solid red";
 						var text=document.createElement("span");
 						text.innerHTML=ele[i].offsetWidth+"px";
-						text.style.color="white";
-						text.style.display="inline-block";
-						text.style.backgroundColor="red";
+						var a=text.style;
+						a.color="white";
+						a.display="inline-block";
+						a.backgroundColor="red";
 						ele[i].parentNode.insertBefore(text,ele[i]);
 					}
 				}
