@@ -1,4 +1,4 @@
-window.addEventListener("load",function()
+function rwd()
 	{
 		var ele=document.querySelectorAll("*");
 		for(var i=0;i<ele.length;i++)
@@ -11,4 +11,7 @@ window.addEventListener("load",function()
 			}
 		}
 		
-	});
+	}
+
+window.addEventListener("load",rwd);
+window.addEventListener("resize",rwd);
