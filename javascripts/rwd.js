@@ -1,20 +1,23 @@
 function rwd()
 	{
-		var ele=document.querySelectorAll("*");
-		for(var i=0;i<ele.length;i++)
+		if(localStorage.dev)
 		{
-			if(ele[i].nodeType==1)
+			var ele=document.querySelectorAll("*");
+			for(var i=0;i<ele.length;i++)
 			{
-				var rect=ele[i].getBoundingClientRect();
-				if(rect.right>window.innerWidth)
+				if(ele[i].nodeType==1)
 				{
-					ele[i].style.border="2px solid red";
-					var text=document.createElement("span");
-					text.innerHTML=ele[i].offsetWidth+"px";
-					text.style.color="white";
-					text.style.display="inline-block";
-					text.style.backgroundColor="red";
-					ele[i].parentNode.insertBefore(text,ele[i]);
+					var rect=ele[i].getBoundingClientRect();
+					if(rect.right>window.innerWidth)
+					{
+						ele[i].style.border="2px solid red";
+						var text=document.createElement("span");
+						text.innerHTML=ele[i].offsetWidth+"px";
+						text.style.color="white";
+						text.style.display="inline-block";
+						text.style.backgroundColor="red";
+						ele[i].parentNode.insertBefore(text,ele[i]);
+					}
 				}
 			}
 		}
