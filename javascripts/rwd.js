@@ -10,10 +10,10 @@ function rwd()
 				{
 					ele[i].style.border="2px solid red";
 					var text=document.createElement("span");
-					text.innerHTML=window.innerWidth+"px";
-					text.style.color="red";
+					text.innerHTML=ele[i].offsetWidth+"px";
+					text.style.color="white";
+					text.style.backgrounColor="red";
 					ele[i].parentNode.insertBefore(text,ele[i]);
-					//ele[i].appendChild(text);
 				}
 			}
 		}
@@ -21,4 +21,4 @@ function rwd()
 	}
 
 window.addEventListener("load",rwd);
-window.addEventListener("resize",rwd);
+
